@@ -32,7 +32,7 @@ while test $# -gt 0; do
                         if test $# -gt 0; then
                                 export PROCESS=$1
                         else
-                                echo "no process specified"
+                                echo "no dns specified"
                                 exit 1
                         fi
                         shift
