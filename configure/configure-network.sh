@@ -77,4 +77,4 @@ done
 
 /usr/local/sf/bin/sfcli.pl configure dns $dnslist
 /usr/local/sf/bin/sfcli.pl configure_hostname dns $hostname
-
+/usr/local/sf/bin/sfcli.pl configure_ipv4 network man $ipaddr $netmask $gw
