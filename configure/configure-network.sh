@@ -55,8 +55,25 @@ while test $# -gt 0; do
                         export gw=`echo $1 | sed -e 's/^[^=]*=//g'`
                         shift
                         ;;
+                -n)
+                        shift
+                        if test $# -gt 0; then
+                                export hostname=$1
+                        else
+                                echo "no hostname specified"
+                                exit 1
+                        fi
+                        shift
+                        ;;
+                --name*)
+                        export hostname=`echo $1 | sed -e 's/^[^=]*=//g'`
+                        shift
+                        ;;
                 *)
                         break
                         ;;
         esac
 done
+
+/usr/local/sf/bin/sfcli.pl configure dns $dnslist
+
