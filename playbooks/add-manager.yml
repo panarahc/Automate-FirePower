@@ -3,4 +3,5 @@
   remote_user: admin
   tasks:
   - name:
-    shell: sudo /usr/local/sf/bin/sfcli.pl isto managed {{ manager_ip }} {{ manager_key }}
+    become: true
+    shell: /usr/local/sf/bin/sfcli.pl isto managed {{ manager_ip }} {{ manager_key }}
