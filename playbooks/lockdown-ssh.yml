@@ -24,3 +24,12 @@
       state: present
       regexp: '^UsePAM '
       line: 'UsePAM no'
+  - name: Allow user 'admin' to sudo without password
+    become: true
+    lineinfile:
+      path: /etc/sudoers
+      state: present
+      regexp: '^admin ALL='
+      line: 'admin ALL=(ALL) NOPASSWD: ALL'
+      validate: '/usr/sbin/visudo -cf %s'
+
