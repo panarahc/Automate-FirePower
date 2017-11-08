@@ -38,21 +38,21 @@ while test $# -gt 0; do
                         shift
                         ;;
                 --dns*)
-                        export PROCESS=`echo $1 | sed -e 's/^[^=]*=//g'`
+                        export dnslist=`echo $1 | sed -e 's/^[^=]*=//g'`
                         shift
                         ;;
                 -g)
                         shift
                         if test $# -gt 0; then
-                                export OUTPUT=$1
+                                export gw=$1
                         else
-                                echo "no output dir specified"
+                                echo "no gateway specified"
                                 exit 1
                         fi
                         shift
                         ;;
                 --gw*)
-                        export OUTPUT=`echo $1 | sed -e 's/^[^=]*=//g'`
+                        export gw=`echo $1 | sed -e 's/^[^=]*=//g'`
                         shift
                         ;;
                 *)
