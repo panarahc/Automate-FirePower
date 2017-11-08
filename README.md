@@ -7,3 +7,5 @@ The aim is to create easy to use shell scripts that will act as a wrapper to the
 # Playbooks
 These are simple ansible playbooks to get the sensor in line with your standards and create a baseline to some extent. Please note that there is a real possibility that these could break the upgrade path as there are new toolsets being introduced to the enviroment and a 1GB shell script isn't exactly a stable upgrade path as it is..
 
+# Examples
+sudo bash ./configure-network.sh --addr=<IP> --dns=<DNS Server> --gw=<GateWay> --name=<Host Name>
