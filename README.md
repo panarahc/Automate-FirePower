@@ -12,3 +12,4 @@ Cisco FirePower has all the necessary prerequesits to run ansible, however you w
 # Shell Examples
 * sudo bash ./configure-network.sh --addr='IP Address' --dns='DNS Server' --gw='GateWay' --name='Host Name'
 
+# Ansible Examples
