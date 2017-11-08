@@ -1,1 +1,12 @@
-
+# This is an ansible playbook to restrict the use of SSH passwords and allow users to sudo without a password for use with ansible scripts.
+---
+- hosts: all
+  remote_user: admin
+  tasks:
+  - name: Deny Empty Passwords
+    become: true
+    lineinfile:
+      path: /etc/ssh/sshd_config
+      state: present
+      regexp: '^PermitEmptyPasswords '
+      line: 'PermitEmptyPasswords no'
