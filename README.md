@@ -9,5 +9,6 @@ These are simple ansible playbooks to get the sensor in line with your standards
 
 Cisco FirePower has all the necessary prerequesits to run ansible, however you will either need to change the default shell from clish or add an account with bash or sh as the default shell.
 
-# Examples
+# Shell Examples
 * sudo bash ./configure-network.sh --addr='IP Address' --dns='DNS Server' --gw='GateWay' --name='Host Name'
+
