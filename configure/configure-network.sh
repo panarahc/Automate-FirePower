@@ -76,4 +76,5 @@ while test $# -gt 0; do
 done
 
 /usr/local/sf/bin/sfcli.pl configure dns $dnslist
+/usr/local/sf/bin/sfcli.pl configure_hostname dns $hostname
 
