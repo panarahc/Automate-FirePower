@@ -10,3 +10,10 @@
       state: present
       regexp: '^PermitEmptyPasswords '
       line: 'PermitEmptyPasswords no'
+  - name: Deny Password Based Login
+    become: true
+    lineinfile:
+      path: /etc/ssh/sshd_config
+      state: present
+      regexp: '^PasswordAuthentication '
+      line: 'PasswordAuthentication no'
