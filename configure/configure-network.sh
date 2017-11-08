@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Make sure we're root
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root" 
+   exit 1
+fi
+
 while test $# -gt 0; do
         case "$1" in
                 -h|--help)
