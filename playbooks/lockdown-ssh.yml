@@ -17,3 +17,10 @@
       state: present
       regexp: '^PasswordAuthentication '
       line: 'PasswordAuthentication no'
+  - name: Disable PAM authentication for SSH
+    become: true
+    lineinfile:
+      path: /etc/ssh/sshd_config
+      state: present
+      regexp: '^UsePAM '
+      line: 'UsePAM no'
