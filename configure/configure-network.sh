@@ -16,7 +16,7 @@ while test $# -gt 0; do
                 -a)
                         shift
                         if test $# -gt 0; then
-                                export PROCESS=$1
+                                export ipaddr=$1
                         else
                                 echo "no ip specified"
                                 exit 1
@@ -30,7 +30,7 @@ while test $# -gt 0; do
                 -d)
                         shift
                         if test $# -gt 0; then
-                                export PROCESS=$1
+                                export dnslist=$1
                         else
                                 echo "no dns specified"
                                 exit 1
@@ -41,7 +41,7 @@ while test $# -gt 0; do
                         export PROCESS=`echo $1 | sed -e 's/^[^=]*=//g'`
                         shift
                         ;;
-                -o)
+                -g)
                         shift
                         if test $# -gt 0; then
                                 export OUTPUT=$1
@@ -51,7 +51,7 @@ while test $# -gt 0; do
                         fi
                         shift
                         ;;
-                --output-dir*)
+                --gw*)
                         export OUTPUT=`echo $1 | sed -e 's/^[^=]*=//g'`
                         shift
                         ;;
