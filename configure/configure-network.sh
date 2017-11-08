@@ -6,6 +6,7 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
+# Check for args
 while test $# -gt 0; do
         case "$1" in
                 -h|--help)
