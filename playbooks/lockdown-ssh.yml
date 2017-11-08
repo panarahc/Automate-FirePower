@@ -33,3 +33,6 @@
       line: 'admin ALL=(ALL) NOPASSWD: ALL'
       validate: '/usr/sbin/visudo -cf %s'
 
+  - name: Rebooting Hosts...
+    become: true
+    shell: reboot
