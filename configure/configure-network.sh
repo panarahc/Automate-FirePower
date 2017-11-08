@@ -15,6 +15,7 @@ while test $# -gt 0; do
                         echo "options:"
                         echo "-h, --help                This help menu"
                         echo "-a, --addr=               Set IP address"
+                        echo "-m, --nmask=              Set NetMask"
                         echo "-d, --dns=                Set System DNS"
                         echo "-g, --gw=                 Set GateWay"
                         echo "-n, --name=               Set System HostName"
@@ -31,7 +32,21 @@ while test $# -gt 0; do
                         shift
                         ;;
                 --addr*)
-                        export PROCESS=`echo $1 | sed -e 's/^[^=]*=//g'`
+                        export ipaddr=`echo $1 | sed -e 's/^[^=]*=//g'`
+                        shift
+                        ;;
+                -m)
+                        shift
+                        if test $# -gt 0; then
+                                export netmask=$1
+                        else
+                                echo "no ip specified"
+                                exit 1
+                        fi
+                        shift
+                        ;;
+                --nmask*)
+                        export netmask=`echo $1 | sed -e 's/^[^=]*=//g'`
                         shift
                         ;;
                 -d)
