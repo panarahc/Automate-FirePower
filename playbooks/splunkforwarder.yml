@@ -1,14 +1,12 @@
 ---
 - hosts: all
   remote_user: admin
-  vars:
-    splunkforwarder_path: ~/SplunkUF.tgz
   tasks:
   - name: Deploy Splunk
     become: true
     template:
-      src: {{ splunkforwarder_path }}
-      dest: ~/SplunkUF.tgz
+      src: "{{ splunkforwarder_path }}"
+      dest: "~/SplunkUF.tgz"
   - name: Extract SplunkUF
     become: true
     shell: tar xvzf SplunkUF.tgz -C /opt
@@ -27,4 +25,4 @@
       line: '@reboot    root /opt/splunkforwarder/bin/splunk start'
   - name: Remove Compressed File
     become: true
-    shell: rm -f ~/SplunkUF.tgz
+    shell: rm -f "~/SplunkUF.tgz"
