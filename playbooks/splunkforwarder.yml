@@ -2,7 +2,7 @@
 - hosts: all
   remote_user: admin
   vars:
-    splunkforwarder_path: ~/splunkforwarder.tgz
+    splunkforwarder_path: ~/SplunkUF.tgz
   tasks
   - name: Deploy SplunkUF
     become: true
@@ -25,3 +25,6 @@
       state: present
       regexp: '^@reboot    root /opt/splunkforwarder/bin/splunk start'
       line: '@reboot    root /opt/splunkforwarder/bin/splunk start'
+  - name: Remove Compressed File
+    become: true
+      shell: rm -f ~/SplunkUF.tgz
