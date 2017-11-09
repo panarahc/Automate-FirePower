@@ -4,7 +4,7 @@
   tasks:
   - name: Deploy Splunk
     become: true
-    template:
+    copy:
       src: "{{ splunkforwarder_path }}"
       dest: "~/SplunkUF.tgz"
   - name: Extract SplunkUF
