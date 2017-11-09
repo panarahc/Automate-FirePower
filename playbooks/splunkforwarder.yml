@@ -9,7 +9,7 @@
       dest: "~/SplunkUF.tgz"
   - name: Extract SplunkUF
     become: true
-    shell: tar -xzf "~/SplunkUF.tgz" -C "/opt"
+    shell: tar -xzf "/root/SplunkUF.tgz" -C "/opt"
   - name: Configure SplunkUF to log /var/log
     become: true
     shell: /opt/splunkforwarder/bin/splunk add monitor /var/log
