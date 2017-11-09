@@ -4,6 +4,7 @@
 
 [FirePower_Sensors]
 <Hostname or IP> <manager_ip=> <manager_key=>
+# You should populate your devices here
 
 [FirePower_Sensors:vars]
 <manager_ip=>  # You may include the manager info in the global vars group
