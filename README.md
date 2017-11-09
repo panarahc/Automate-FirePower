@@ -17,3 +17,7 @@ Cisco FirePower has all the necessary prerequesits to run ansible, however you w
   * -e 'host_key_checking=False'
   * --private-key ~/.ssh/SourceFireKey
   * --limit hostname
+  
+  
+# Disclaimer
+The scripts and software contained herein come with absolutly no waranty of any kind, explicitly stated or implied. Use at your own risk. It is up to the admin to make this work for them and to make their enviroment fluid and functional. I highly encourage everyone to automate, but before you do so, make sure you know what you're getting into and test, test, test!
