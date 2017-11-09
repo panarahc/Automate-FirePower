@@ -3,10 +3,9 @@
   remote_user: admin
   vars:
     splunkforwarder_path: ~/SplunkUF.tgz
-  tasks
-  - name: Deploy SplunkUF
-    become: true
+  tasks:
     template:
+      become: true
       src: {{ splunkforwarder_path }}
       dest: ~/SplunkUF.tgz
   - name: Extract SplunkUF
