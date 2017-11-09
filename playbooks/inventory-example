@@ -15,7 +15,7 @@
 #manager_key= #   if you want this info to be the same for all sensors.
 
 # Splunk Config Vars
-#splunk_server_address=  
+#splunk_server_address=  # IP address of Splunk Instance
 #splunk_server_port=9997 # Port for Splunk instance, default is 9997
 #splunkforwarder_path=
 
