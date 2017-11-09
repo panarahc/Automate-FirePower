@@ -2,10 +2,12 @@
 - hosts: FirePower_Sensors
   remote_user: admin
   tasks:
+  # Register Manager to Sensor
   - name: Register Manager
     become: true
     shell: /usr/local/sf/bin/sfcli.pl isto managed {{ manager_ip }} {{ manager_key }}
 
+  # Register Sensor to Manager
   - name: Register Sensor
     become: true
     shell: /usr/local/sf/bin/register_appliance.pl {{ inventory_hostname }} {{ manager_key }} sensor
