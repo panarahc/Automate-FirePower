@@ -4,7 +4,7 @@
   tasks:
   - name: Remove Previous Splunk Install
     become: true
-    shell: rm -f /opt/splunkforwarder/
+    shell: rm -rf /opt/splunkforwarder/
   - name: Deploy Splunk
     become: true
     copy:
