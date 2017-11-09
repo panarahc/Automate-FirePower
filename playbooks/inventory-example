@@ -17,6 +17,7 @@
 # Splunk Config Vars
 #splunk_server_address=
 #splunk_server_port=
+#splunkforwarder_path=
 
 # The FirePower managment key must be an alpha numeric key between 2 and 36 chars.
 #   It can be a unique key or individual, based on the user's needs.
