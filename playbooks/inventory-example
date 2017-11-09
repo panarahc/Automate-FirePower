@@ -1,3 +1,4 @@
+# This is an example Inventory file for running ansible with the included playbooks.
 [SourceFire_Managers]
 <Hostname or IP>
 
