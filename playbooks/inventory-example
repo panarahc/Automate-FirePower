@@ -3,7 +3,7 @@
 <Hostname or IP>
 
 [FirePower_Sensors]
-<Hostname or IP> <manager_ip=> <manager_key=>
+# <Hostname or IP> <manager_ip=> <manager_key=>
 # You should populate your devices here
 
 [FirePower_Sensors:vars]
