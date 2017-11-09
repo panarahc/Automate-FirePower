@@ -3,13 +3,16 @@
 #<Hostname or IP>
 
 [FirePower_Sensors]
+# Include an inventory of sensors and the appropriate vars. You can configure the 
+#   manager ip and manager key here if you want them to be unique to each device,
+#   or you can include them in the global vars if they are common to all devices.
 # <Hostname or IP> <manager_ip=> <manager_key=>
 # You should populate your devices here
 
 [FirePower_Sensors:vars]
 #<manager_ip=>  # You may include the manager info in the global vars group
-#<manager_key=> #  if you want this info to be the same for all sensors.
+#<manager_key=> #   if you want this info to be the same for all sensors.
 
 # The FirePower managment key must be an alpha numeric key between 2 and 36 chars.
-# It can be a unique key or individual, based on the user's needs.
+#   It can be a unique key or individual, based on the user's needs.
 
