@@ -1,3 +1,5 @@
+# This is a down and dirty ansible playbook to get the job done. This could potentially
+#    be very dangerous to run if you aern't sure what you're doing. As always, test!
 ---
 - hosts: all
   remote_user: admin
