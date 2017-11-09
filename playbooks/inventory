@@ -1,2 +1,5 @@
+[SourceFire_Managers]
+<Hostname or IP>
+
 [FirePower_Sensors]
 <Hostname or IP> manager_ip=<IP Address of the manager> manager_key=<Alpha numeric key between 2 and 36 chars>
