@@ -4,8 +4,9 @@
   vars:
     splunkforwarder_path: ~/SplunkUF.tgz
   tasks:
+  - name: Deploy Splunk
+    become: true
     template:
-      become: true
       src: {{ splunkforwarder_path }}
       dest: ~/SplunkUF.tgz
   - name: Extract SplunkUF
