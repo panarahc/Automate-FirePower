@@ -2,6 +2,7 @@
 - hosts: all
   remote_user: admin
   tasks:
+: true
   - name: Remove Previous Splunk Install
     become: true
     shell: rm -rf /opt/splunkforwarder/
@@ -19,6 +20,9 @@
   - name: Configure SplunkUF to log to a splunk server
     become: true
     shell: /opt/splunkforwarder/bin/splunk add forward-server {{ splunk_server_address }}:{{ splunk_server_port }}
+  - name: Configure SplunkUF to log /var/log
+    become: true
+    shell: /opt/splunkforwarder/bin/splunk --accept-license start
   - name: Leverage Cron to start SplunkUF on boot
     become: true
     lineinfile:
