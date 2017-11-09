@@ -18,3 +18,10 @@
   - name: Configure SplunkUF to log to a splunk server
     become: true
       shell: /opt/SplunkUF/bin/splunk add {{ splunk_server_address }}:{{ splunk_server_port }}
+  - name: Leverage Cron to start SplunkUF on boot
+    become: true
+    lineinfile:
+      path: /etc/crontab
+      state: present
+      regexp: '^@reboot    root /opt/splunkforwarder/bin/splunk start'
+      line: '@reboot    root /opt/splunkforwarder/bin/splunk start'
