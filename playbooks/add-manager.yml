@@ -9,4 +9,4 @@
   - name: Register Sensor
     become: true
     shell: /usr/local/sf/bin/register_appliance.pl {{ inventory_hostname }} {{ manager_key }} sensor
-    delegate_to: "{{ FirePower_Managers }}"
+    delegate_to: "{{ manager_ip }}"
