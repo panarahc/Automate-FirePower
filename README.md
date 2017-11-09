@@ -17,7 +17,6 @@ Cisco FirePower has all the necessary prerequesits to run ansible, however you w
   * -e 'host_key_checking=False' == Use this option if you've never logged into the devices through ssh. It's less safe than adding the hostkeys but much quicker, and if you're logging in through keypairs then host keys don't add too much value.
   * --private-key ~/.ssh/SourceFireKey == Login using a private key.
   * --limit 'hostname' == Limit to one device.
-  
-  
+
 # Disclaimer
 The scripts and software contained herein come with absolutly no waranty of any kind, explicitly stated or implied. Use at your own risk. It is up to the admin to make this work for them and to make their enviroment fluid and functional. I highly encourage everyone to automate, but before you do so, make sure you know what you're getting into and test, test, test!
