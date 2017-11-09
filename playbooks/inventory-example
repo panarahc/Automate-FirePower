@@ -7,5 +7,6 @@
 [FirePower_Sensors:vars]
 manager_ip=
 
-
+# The FirePower managment key must be an alpha numeric key between 2 and 36 chars.
+# It can be a unique key or individual, based on the user's needs.
 
