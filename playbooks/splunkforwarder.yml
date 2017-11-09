@@ -15,7 +15,7 @@
     shell: /opt/splunkforwarder/bin/splunk --accept-license add monitor "/var/log"
   - name: Configure SplunkUF to log to a splunk server
     become: true
-    shell: /opt/splunkforwarder/bin/splunk add {{ splunk_server_address }}:{{ splunk_server_port }}
+    shell: /opt/splunkforwarder/bin/splunk add forward-server {{ splunk_server_address }}:{{ splunk_server_port }}
   - name: Leverage Cron to start SplunkUF on boot
     become: true
     lineinfile:
