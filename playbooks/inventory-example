@@ -17,7 +17,7 @@
 # Splunk Config Vars
 #splunk_server_address=  # IP address of Splunk Instance
 #splunk_server_port=9997 # Port for Splunk instance, default is 9997
-#splunkforwarder_path=
+#splunkforwarder_path=   # Path to local .tgz Splunk file
 
 # The FirePower managment key must be an alpha numeric key between 2 and 36 chars.
 #   It can be a unique key or individual, based on the user's needs.
