@@ -2,7 +2,6 @@
 - hosts: all
   remote_user: admin
   tasks:
-: true
   - name: Remove Previous Splunk Install
     become: true
     shell: rm -rf /opt/splunkforwarder/
