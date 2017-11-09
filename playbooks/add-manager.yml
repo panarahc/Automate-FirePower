@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: FirePower_Sensors
   remote_user: admin
   tasks:
   - name:
