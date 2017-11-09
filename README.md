@@ -7,7 +7,7 @@ The aim is to create easy to use shell scripts that will act as a wrapper to the
 # Playbooks
 These are simple ansible playbooks to get the sensor in line with your standards and create a baseline to some extent. Please note that there is a real possibility that these could break the upgrade path as there are new toolsets being introduced to the enviroment and a 1GB shell script isn't exactly a stable upgrade path as it is..
 
-Cisco FirePower has all the necessary prerequesits to run ansible, however you will either need to change the default shell from clish or add an account with bash or sh as the default shell.
+Cisco FirePower has all the necessary prerequesits to run ansible, however you will either need to change the default shell from clish or add an account with bash or sh as the default shell. This should go without saying, but you will also have to configure your inventory and the device's network configuration to use ansible.
 
 # Shell Examples
 * sudo bash ./configure-network.sh --addr='IP Address' --dns='DNS Server' --gw='GateWay' --name='Host Name'
