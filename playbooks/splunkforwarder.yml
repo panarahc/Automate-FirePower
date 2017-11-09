@@ -12,17 +12,17 @@
     shell: tar -xzf "~/SplunkUF.tgz" -C "/opt"
   - name: Configure SplunkUF to log /var/log
     become: true
-    shell: /opt/SplunkUF/bin/splunk add monitor /var/log
+    shell: /opt/splunkforwarder/bin/splunk add monitor /var/log
   - name: Configure SplunkUF to log to a splunk server
     become: true
-    shell: /opt/SplunkUF/bin/splunk add {{ splunk_server_address }}:{{ splunk_server_port }}
+    shell: /opt/splunkforwarder/bin/splunk add {{ splunk_server_address }}:{{ splunk_server_port }}
   - name: Leverage Cron to start SplunkUF on boot
     become: true
     lineinfile:
       path: /etc/crontab
       state: present
-      regexp: '^@reboot    root /opt/SplunkUF/bin/splunk start'
-      line: '@reboot    root /opt/SplunkUF/bin/splunk start'
+      regexp: '^@reboot    root /opt/splunkforwarder/bin/splunk start'
+      line: '@reboot    root /opt/splunkforwarder/bin/splunk start'
   - name: Remove Compressed File
     become: true
     shell: rm -f "~/SplunkUF.tgz"
