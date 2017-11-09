@@ -1,6 +1,6 @@
 # This is an example Inventory file for running ansible with the included playbooks.
 [SourceFire_Managers]
-<Hostname or IP>
+#<Hostname or IP>
 
 [FirePower_Sensors]
 # <Hostname or IP> <manager_ip=> <manager_key=>
