@@ -21,8 +21,8 @@
     lineinfile:
       path: /etc/crontab
       state: present
-      regexp: '^@reboot    root /opt/splunkforwarder/bin/splunk start'
-      line: '@reboot    root /opt/splunkforwarder/bin/splunk start'
+      regexp: '^@reboot    root /opt/SplunkUF/bin/splunk start'
+      line: '@reboot    root /opt/SplunkUF/bin/splunk start'
   - name: Remove Compressed File
     become: true
     shell: rm -f "~/SplunkUF.tgz"
