@@ -1,5 +1,11 @@
 ---
 - hosts: all
   remote_user: admin
-  tasks:
-    
+  vars:
+    splunkforwarder_path: ~/splunkforwarder.tgz
+  tasks
+  - name: Deploy SplunkUF
+    become: true
+    template:
+      src: {{ splunkforwarder_path }}
+      dest: ~/SplunkUF.tgz
