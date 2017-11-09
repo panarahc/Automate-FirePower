@@ -33,6 +33,6 @@
       line: 'admin ALL=(ALL) NOPASSWD: ALL'
       validate: '/usr/sbin/visudo -cf %s'
 
-  - name: Rebooting Hosts...
+  - name: Restart SSH Daemon
     become: true
-    shell: reboot
+    shell: /etc/rc.d/init.d/sshd restart
