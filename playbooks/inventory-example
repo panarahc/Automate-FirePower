@@ -10,8 +10,10 @@
 # You should populate your devices here
 
 [FirePower_Sensors:vars]
-#<manager_ip=>  # You may include the manager info in the global vars group
-#<manager_key=> #   if you want this info to be the same for all sensors.
+# Sensor Config Vars
+#manager_ip=  # You may include the manager info in the global vars group
+#manager_key= #   if you want this info to be the same for all sensors.
+
 
 # The FirePower managment key must be an alpha numeric key between 2 and 36 chars.
 #   It can be a unique key or individual, based on the user's needs.
