@@ -2,6 +2,6 @@
 - hosts: FirePower_Sensors
   remote_user: admin
   tasks:
-  - name:
+  - name: Register Manager
     become: true
     shell: /usr/local/sf/bin/sfcli.pl isto managed {{ manager_ip }} {{ manager_key }}
