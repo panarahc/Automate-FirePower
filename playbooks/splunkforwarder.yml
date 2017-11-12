@@ -1,5 +1,12 @@
 # This is a down and dirty ansible playbook to get the job done. This could potentially
 #    be very dangerous to run if you aern't sure what you're doing. As always, test!
+#
+# As well, this 'should' work on any unix system that can execute the binaries. However, 
+#   there is a reason this isn't common place. Namely stability and upgradability, but this
+#   script should allow for the latter and the former is really all about the host. I have 
+#   expierenced a good ammount of success with this and would like to test it farther for
+#   appliance type systems.
+
 ---
 - hosts: all
   remote_user: admin
