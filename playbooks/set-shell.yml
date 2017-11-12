@@ -1,3 +1,4 @@
 ---
 - hosts: FirePower_Sensors
   remote_user: admin
+  tasks:
