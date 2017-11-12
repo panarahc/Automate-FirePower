@@ -27,6 +27,7 @@
   - name: Start SplunkUF
     become: true
     shell: /opt/splunkforwarder/bin/splunk --accept-license start
+  # SourceFire uses a weird init.d structure. Chances are I can just create a sim link to rc.d but this is the quick work around for now.
   - name: Leverage Cron to start SplunkUF on boot
     become: true
     lineinfile:
