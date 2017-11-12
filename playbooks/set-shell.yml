@@ -1,5 +1,4 @@
 # A simple playbook to set the default shell away from clish. #Not Tested.
-
 ---
 - hosts: FirePower_Sensors
   remote_user: admin
