@@ -1,4 +1,4 @@
-# A simple playbook to set the default shell away from clish. Do not run this yet.
+# A simple playbook to set the default shell away from clish.
 ---
 - hosts: FirePower_Sensors
   remote_user: admin
@@ -8,8 +8,7 @@
     raw: expert
   - name: Change the default shell to bash
     become: true
-    lineinfile:
+    replace:
       path: /etc/passwd
-      state: present
-      regexp: '^admin'
-      line: 'admin'
+      regexp: '/usr/bin/clish'
+      line: '/bin/bash'
