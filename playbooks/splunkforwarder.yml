@@ -11,12 +11,9 @@
 - hosts: all
   remote_user: admin
   tasks:
-  - name: Stop SplunkUF if Running and Remove Previous Install
+  - name: Stop SplunkUF if Running and Force Remove Previous Install
     become: true
     shell: if [ -f "/opt/splunkforwarder/bin/splunk" ]; then /opt/splunkforwarder/bin/splunk stop; rm -rf /opt/splunkforwarder; fi
-  - name: Remove Previous Splunk Install
-    become: true
-    shell: rm -rf /opt/splunkforwarder/
   - name: Deploy Splunk
     become: true
     copy:
