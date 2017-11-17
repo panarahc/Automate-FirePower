@@ -14,6 +14,14 @@
   - name: Stop SplunkUF if Running and Force Remove Previous Install
     become: true
     shell: if [ -f "/opt/splunkforwarder/bin/splunk" ]; then /opt/splunkforwarder/bin/splunk stop; rm -rf /opt/splunkforwarder; fi
+  - name: Ensure /opt exists
+    become: true
+    file:
+      path: /opt
+      state: directory
+      owner: root
+      group: root
+      mode: 0755
   - name: Deploy Splunk
     become: true
     copy:
