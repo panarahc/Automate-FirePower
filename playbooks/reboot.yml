@@ -5,3 +5,4 @@
     shell: reboot
     async: 0
     poll: 0
+  - name: Waiting for Server
