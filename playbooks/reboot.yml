@@ -2,3 +2,4 @@
 ---
 - hosts: all
   - name: Rebooting Systems
+    shell: reboot
