@@ -4,3 +4,4 @@
   - name: Rebooting Systems
     shell: reboot
     async: 0
+    poll: 0
