@@ -1,6 +1,7 @@
 # Simple playbook to reboot hosts
 ---
 - hosts: all
+  remote_user: {{ user }}
   tasks:
   - name: Rebooting Systems
     become: true
