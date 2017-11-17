@@ -13,6 +13,7 @@
 # Sensor Config Vars
 #manager_ip=  # You may include the manager info in the global vars group
 #manager_key= #   if you want this info to be the same for all sensors.
+#user=admin # Default remote user
 
 # Splunk Config Vars
 #splunk_server_address=  # IP address of Splunk Instance
