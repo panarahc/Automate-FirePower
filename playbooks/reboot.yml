@@ -1,6 +1,7 @@
 # Simple playbook to reboot hosts
 ---
 - hosts: all
+  tasks:
   - name: Rebooting Systems
     shell: reboot
     async: 0
