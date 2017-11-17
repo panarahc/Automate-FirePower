@@ -1,2 +1,3 @@
+# Simple playbook to reboot hosts
 ---
 - hosts: all
