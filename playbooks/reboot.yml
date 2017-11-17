@@ -1,3 +1,4 @@
 # Simple playbook to reboot hosts
 ---
 - hosts: all
+  - name: Rebooting Systems
