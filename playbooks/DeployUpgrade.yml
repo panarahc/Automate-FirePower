@@ -9,6 +9,7 @@
 # Just remember to set the 'update_path' variable or it'll fail!
 ---
 - hosts: all # Need to limit to actual groups, will do this after testing.
+  remote_user: "{{ user }}"
   tasks:
   - name: Copy Upgrade to Remote system
     become: true
