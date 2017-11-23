@@ -1,6 +1,12 @@
 # This is a simple ansible playbook to deploy upgrades to sourcefire.
 #    Make sure you select the correct upgrade to deploy!
 
+# This should work on both the SourceFire/FirePower Manager and Sensors, 
+#   although the official updates themselves are nutorious for breaking systems.
+#   Never update without a window to deal with worst case scenarios and a 
+#   plan to recover.
+
+# Just remember to set the 'update_path' variable or it'll fail!
 ---
 - hosts: all # Need to limit to actual groups, will do this after testing.
   tasks:
