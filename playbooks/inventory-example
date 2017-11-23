@@ -1,6 +1,6 @@
 # This is an example Inventory file for running ansible with the included playbooks.
 [SourceFire_Managers]
-#<Hostname or IP>
+# <Hostname or IP>
 
 [FirePower_Sensors]
 # Include an inventory of sensors and the appropriate vars. You can configure the 
@@ -11,14 +11,22 @@
 
 [FirePower_Sensors:vars]
 # Sensor Config Vars
-#manager_ip=  # You may include the manager info in the global vars group
-#manager_key= #   if you want this info to be the same for all sensors.
-#user=admin # Default remote user
+# manager_ip=  # You may include the manager info in the global vars group
+# manager_key= #   if you want this info to be the same for all sensors.
+
+[all:vars]
+# user=admin # Default remote user
+
+# update_path= # For using the Upgrade Playbook.
 
 # Splunk Config Vars
-#splunk_server_address=  # IP address of Splunk Instance
-#splunk_server_port=9997 # Port for Splunk instance, default is 9997
-#splunkforwarder_path=./SplunkUF.tgx   # Path to local .tgz Splunk file
+# splunk_server_address=  # IP address of Splunk Instance
+# splunk_server_port=9997 # Port for Splunk instance, default is 9997
+# splunkforwarder_path=./SplunkUF.tgx   # Path to local .tgz Splunk file, used for deploying.
+# =====
+# You may download the Splunk Universal Forwarder from the official site:
+#   https://www.splunk.com/en_us/download/universal-forwarder.html
+# =====
 
 # The FirePower managment key must be an alpha numeric key between 2 and 36 chars.
 #   It can be a unique key or individual, based on the user's needs.
