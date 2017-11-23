@@ -9,3 +9,6 @@
     copy:
       src: "{{ update_path }}"
       dest: "/var/sf/updates/"
+  - name: Install Update
+    become: true
+    shell: "bash /usr/local/sf/bin/install_update.pl /var/sf/updates/{{ upgrade_path }}"
