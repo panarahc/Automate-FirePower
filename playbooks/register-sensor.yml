@@ -1,4 +1,4 @@
-# A simple playbook to register the manager with the sensor and then configure the sensor on the manager. A convoluted process amde easy!
+# A simple playbook to register the manager with the sensor and then configure the sensor on the manager. A convoluted process made easy!
 # I've only tested this on the sensor, not the manager. It 'should' work but needs to be validated.
 ---
 - hosts: FirePower_Sensors
