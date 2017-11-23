@@ -2,3 +2,4 @@
 #    Make sure you select the correct upgrade to deploy!
 
 ---
+- hosts: all # Need to limit to actual groups, will do this after testing.
