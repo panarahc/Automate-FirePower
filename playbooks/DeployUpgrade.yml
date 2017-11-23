@@ -4,3 +4,8 @@
 ---
 - hosts: all # Need to limit to actual groups, will do this after testing.
   tasks:
+  - name: Copy Upgrade to Remote system
+    become: true
+    copy:
+      src: "{{ update_path }}"
+      dest: "/var/sf/updates/"
