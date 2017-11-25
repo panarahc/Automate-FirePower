@@ -12,5 +12,5 @@
   # Register Sensor to Manager
   - name: Register Sensor
     become: true
-    shell: /usr/local/sf/bin/register_appliance.pl -h {{ inventory_hostname }} -k {{ manager_key }} sensor
+    shell: /usr/local/sf/bin/register_appliance.pl -h {{ inventory_hostname }} -k {{ manager_key }} -a {{ appliancetype }} -p {{ policy }} -l {{ license }}
     delegate_to: "{{ manager_ip }}"
