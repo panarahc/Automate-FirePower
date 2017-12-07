@@ -1,6 +1,13 @@
 # A simple playbook to register the manager with the sensor 
 #   and then configure the sensor on the manager. A convoluted process made easy!
+
 # This has been validated on both the sensor and the manager. 
+#   If you run into a 'registered' device that does not show up in invintory
+#   use the 'remove_peer.pl' script to remiediate. That is not a symptom of this
+#   playbook but an issue with the device itself.
+
+# There is an issue with pushing policies and multiple licenses to devices using this,
+#   but it still speeds things up alot since you'll only have to correct the config in the UI.
 ---
 - hosts: FirePower_Sensors
   remote_user: "{{ user }}"
