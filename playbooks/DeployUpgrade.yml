@@ -7,6 +7,10 @@
 #   plan to recover.
 
 # Just remember to set the 'update_path' variable or it'll fail!
+# This playbook is largly untested for many conditions and in 
+#   certian situations it will be better to either use the UI or 
+#   execute this task from the local system as a persistent process.
+#   As always, test first!
 ---
 - hosts: all # Need to limit to actual groups, will do this after testing.
   remote_user: "{{ user }}"
