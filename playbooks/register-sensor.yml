@@ -1,5 +1,6 @@
-# A simple playbook to register the manager with the sensor and then configure the sensor on the manager. A convoluted process made easy!
-# This has been validated on both the sensor and the manager.
+# A simple playbook to register the manager with the sensor 
+#   and then configure the sensor on the manager. A convoluted process made easy!
+# This has been validated on both the sensor and the manager. 
 ---
 - hosts: FirePower_Sensors
   remote_user: "{{ user }}"
