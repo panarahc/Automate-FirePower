@@ -1,0 +1,10 @@
+# A simple Ansible Playbook to configure DNS within Cisco FirePower.
+---
+- hosts: all
+  remote_user: "{{ user }}"
+  tasks:
+  # Configure DNS
+  #   Remember to add the var to your inventory!
+  - name: Configure DNS
+    become: true
+    shell: "/usr/local/sf/bin/sfcli.pl configure dns {{ dns1 }} {{ dns2 }}"
