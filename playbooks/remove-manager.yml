@@ -1,0 +1,11 @@
+# A simple Ansible Playbook to remove the manager from the sensor
+#   configuration in the event of an emergency, such as having to
+#   rebuild the manager.
+---
+- hosts: all
+  remote_user: "{{ user }}"
+  tasks:
+  # Remove manager
+  - name: Remove Manager
+    become: true
+    shell: "/usr/local/sf/bin/sfcli.pl configure manager delete"
