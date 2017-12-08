@@ -1,0 +1,10 @@
+# A simple Ansible Playbook to configure Search Domains within Cisco FirePower.
+---
+- hosts: all
+  remote_user: "{{ user }}"
+  tasks:
+  # Configure Search Domain
+  #   Remember to add the var to your inventory!
+  - name: Configure Search Domain
+    become: true
+    shell: /usr/local/sf/bin/sfcli.pl configure_searchdomains dns {{ searchlist }}
