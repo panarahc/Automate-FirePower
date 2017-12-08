@@ -7,4 +7,4 @@
   #   Remember to add the var to your inventory!
   - name: Configure Search Domain
     become: true
-    shell: /usr/local/sf/bin/sfcli.pl configure_searchdomains dns {{ searchlist }}
+    shell: "/usr/local/sf/bin/sfcli.pl configure_searchdomains dns {{ searchlist }}"
