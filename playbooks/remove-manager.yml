@@ -1,8 +1,9 @@
 # A simple Ansible Playbook to remove the manager from the sensor
 #   configuration in the event of an emergency, such as having to
 #   rebuild the manager, or if you need to remove the manager without
-#   reseting the config on sensor. If you remove from the manager,
-#   It will revert to clish as the default shell.
+#   reseting the config on sensor. If you remove the sensor from the 
+#   manager UI or 'remove_peer.pl' (same thing), it will revert to 
+#   clish as the default shell.
 ---
 - hosts: FirePower_Sensors
   remote_user: "{{ user }}"
