@@ -1,11 +1,13 @@
 # A simple Ansible Playbook to remove the manager from the sensor
 #   configuration in the event of an emergency, such as having to
-#   rebuild the manager.
+#   rebuild the manager, or if you need to remove the manager without
+#   reseting the config on sensor. If you remove from the manager,
+#   It will revert to clish as the default shell.
 ---
-- hosts: all
+- hosts: FirePower_Sensors
   remote_user: "{{ user }}"
   tasks:
-  # Remove manager
-  - name: Remove Manager
+  # Remove Manager on Sensor
+  - name: Removing Manager on Sensor
     become: true
-    shell: "/usr/local/sf/bin/sfcli.pl configure manager delete"
+    shell: "/usr/local/sf/bin/sfcli.pl not managed"
