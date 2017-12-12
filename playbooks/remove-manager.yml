@@ -11,3 +11,9 @@
   - name: Removing Manager on Sensor
     become: true
     shell: "/usr/local/sf/bin/sfcli.pl not managed"
+
+  # Remove Sensor on Manager
+  - name: Removing Sensor on Manager
+    become: true
+    shell: "/usr/local/sf/bin/remove_peer.pl {{ inventory_hostname }}"
+    delegate_to: "{{ manager_ip }}"
