@@ -7,12 +7,15 @@
 #   manager ip and manager key here if you want them to be unique to each device,
 #   or you can include them in the global vars if they are common to all devices.
 # <Hostname or IP> <manager_ip=> <manager_key=>
-# You should populate your devices here
+# You should populate your devices here, and any individual vars.
+#  It would be better to use the group vars vs individual vars unless
+#  you have a one-off system.
 
 [FirePower_Sensors:vars]
 # Sensor Config Vars
 # manager_ip=  # You may include the manager info in the global vars group
-# manager_key= #   if you want this info to be the same for all sensors.
+# manager_key= #   if you want this to be the same for all sensors, otherwise 
+               #    add as a var for each system.
 
 [all:vars]
 # user=admin # Default remote user
